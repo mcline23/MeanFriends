@@ -1,0 +1,8 @@
+<h3>Friend New Component</h3>
+  
+<form (submit) = "create()">
+  First Name:<input type="text" name = "firstname" [(ngModel)] = "newFriend.firstname">
+  Last Name: <input type="text" name = "lastname" [(ngModel)] = "newFriend.lastname">
+  Birthday: <input type="date" name = "birthday" [(ngModel)] = "newFriend.birthday">
+  <input type="submit" value = "Create" >
+</form>

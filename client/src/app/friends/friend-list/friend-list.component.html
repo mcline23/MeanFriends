@@ -1,0 +1,19 @@
+<div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Show</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor = "let friend of friends; let i = index">
+      <td>{{friend.firstname}} {{friend.lastname}}</td>
+      <td> <a [routerLink]="['/show', friend._id]"> Show </a></td>
+      <td><a href (click)="delete(friend)">Delete</a></td>
+  
+      <td><a [routerLink]="['/edit', friend._id, friend]"> Edit</a>
+    </tr>
+  </table>
+
+<a [routerLink]="['/new']"><button type="button" name="create">New Friend</button></a>
+</div>
